@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Separator?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+	minWidth="-Infinity" prefHeight="800" prefWidth="1000.0"
+	tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
+
+	<tabs>
+		<Tab text="재고관리">
+			<AnchorPane prefHeight="520" prefWidth="650"
+				style="-fx-background-image : url(image/background.jpg);">
+				<children>
+					<Label text="상품명 :" style="-fx-font-size: 18;" layoutX="10.0" layoutY="10.0">
+					</Label>
+					<TextField fx:id="txt_Im_Name" layoutX="70.0" layoutY="10.0"
+						prefHeight="3.0" prefWidth="80.0" promptText="예 : 상품명" />
+					<Button text="검색"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Im_Search" layoutX="153.0" layoutY="9.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="수정"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Im_Edit" layoutX="210.0" layoutY="9.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="삭제"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Im_Delete" layoutX="267.0" layoutY="9.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="전체"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Im_Total" layoutX="324.0" layoutY="9.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="초기화"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Im_Init" layoutX="381.0" layoutY="9.0" prefHeight="25"
+						prefWidth="70" />
+					<Button text="취소"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Im_Exit" layoutX="455.0" layoutY="9.0" prefHeight="25"
+						prefWidth="50" />
+					<TableView fx:id="tableviewIm"
+						style="-fx-base: #1d1d1d; -fx-background-color: #1d1d1d; -fx-table-cell-border-color: transparent; -fx-table-header-border-color: transparent;"
+						layoutX="10.0" layoutY="40.0" prefHeight="715" prefWidth="980.0" />
+
+				</children>
+			</AnchorPane>
+		</Tab>
+		<Tab text="매입">
+			<AnchorPane prefHeight="520" prefWidth="650">
+				<children>
+					<Separator style="" layoutX="10.0" layoutY="5.0" orientation="HORIZONTAL"
+						prefWidth="1000.0" />
+					<Separator layoutX="10.0" layoutY="37.0" orientation="HORIZONTAL"
+						prefWidth="1000.0" />
+					<Separator layoutX="10.0" layoutY="65.0" orientation="HORIZONTAL"
+						prefWidth="1000.0" />
+					<Separator layoutX="10.0" layoutY="95.0" orientation="HORIZONTAL"
+						prefWidth="1000.0" />
+					<Separator layoutX="5.0" layoutY="5.0" orientation="VERTICAL"
+						prefHeight="790.0" />
+					<Separator layoutX="995.0" layoutY="5.0" orientation="VERTICAL"
+						prefHeight="790.0" />
+					<Separator layoutX="235.0" layoutY="37.0" orientation="VERTICAL"
+						prefHeight="58.0" />
+					<Separator layoutX="445.0" layoutY="37.0" orientation="VERTICAL"
+						prefHeight="58.0" />
+					<Separator layoutX="525.0" layoutY="37.0" orientation="VERTICAL"
+						prefHeight="58.0" />
+					<Separator layoutX="85.0" layoutY="37.0" orientation="VERTICAL"
+						prefHeight="58.0" />
+					<Separator layoutX="295.0" layoutY="37.0" orientation="VERTICAL"
+						prefHeight="58.0" />
+					<Separator layoutX="675.0" layoutY="37.0" orientation="VERTICAL"
+						prefHeight="58.0" />
+					<Button text="매입업체등록"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Buycompany" layoutX="10.0" layoutY="9.0" prefHeight="25"
+						prefWidth="150" />
+					<Label text="이력번호 "  layoutX="10.0" layoutY="40.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Buy_tracenumber" layoutX="90.0"
+						layoutY="40.0" />
+					<Label text="상호명 " layoutX="240" layoutY="40.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Buy_comname" layoutX="300.0"
+						layoutY="40.0" />
+					<Label text="상품명 " layoutX="450.0" layoutY="40.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Buy_productname" layoutX="530.0"
+						layoutY="40.0" />
+					<Label text="매입단가 " layoutX="10.0" layoutY="70.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Buy_price" layoutX="90.0" layoutY="70.0" />
+					<Label text="KG  " layoutX="250.0" layoutY="70.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Buy_kg" layoutX="300.0" layoutY="70.0" />
+					<Label text="매입날짜 " layoutX="450.0" layoutY="70.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Buy_date" layoutX="530.0" layoutY="70.0"
+						promptText="예 : YYYY-MM-DD" />
+					<Label text="매입총액 " layoutX="680.0" layoutY="70.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Buy_totalprice" layoutX="760.0"
+						layoutY="70.0" />
+					<TextField fx:id="txt_Buy_search" layoutX="610" layoutY="101.0"
+						promptText="예 : 상호명" />
+					<Label text="검색 " layoutX="570" layoutY="101.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+
+					<Button text="등록 "
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Buy_join" layoutX="10.0" layoutY="100.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="수정"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Buy_edit" layoutX="67.0" layoutY="100.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="초기화"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Buy_init" layoutX="124.0" layoutY="100.0" prefHeight="25"
+						prefWidth="70" />
+					<Button text="취소"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Buy_exit" layoutX="205.0" layoutY="100.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="삭제"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Buy_delete" layoutX="270.0" layoutY="100.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="계산"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Buy_sum" layoutX="900.0" layoutY="70.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="검색"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Buy_search" layoutX="753.0" layoutY="100.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="전체"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Buy_total" layoutX="810.0" layoutY="100.0" prefHeight="25"
+						prefWidth="50" />
+
+					<TableView fx:id="tableviewBuy"
+						style="-fx-base: #1d1d1d; -fx-background-color: #1d1d1d; -fx-table-cell-border-color: transparent; -fx-table-header-border-color: transparent;"
+						layoutX="10.0" layoutY="130.0" prefHeight="650" prefWidth="980.0" />
+				</children>
+			</AnchorPane>
+		</Tab>
+		<Tab text="판매">
+			<AnchorPane prefHeight="520" prefWidth="650">
+				<children>
+					<Separator layoutX="10.0" layoutY="5.0" orientation="HORIZONTAL"
+						prefWidth="1000.0" />
+					<Separator layoutX="10.0" layoutY="37.0" orientation="HORIZONTAL"
+						prefWidth="1000.0" />
+					<Separator layoutX="10.0" layoutY="65.0" orientation="HORIZONTAL"
+						prefWidth="1000.0" />
+					<Separator layoutX="10.0" layoutY="95.0" orientation="HORIZONTAL"
+						prefWidth="1000.0" />
+					<Separator layoutX="5.0" layoutY="5.0" orientation="VERTICAL"
+						prefHeight="790.0" />
+					<Separator layoutX="995.0" layoutY="5.0" orientation="VERTICAL"
+						prefHeight="790.0" />
+					<Separator layoutX="235.0" layoutY="37.0" orientation="VERTICAL"
+						prefHeight="58.0" />
+					<Separator layoutX="445.0" layoutY="37.0" orientation="VERTICAL"
+						prefHeight="58.0" />
+					<Separator layoutX="525.0" layoutY="37.0" orientation="VERTICAL"
+						prefHeight="58.0" />
+					<Separator layoutX="85.0" layoutY="37.0" orientation="VERTICAL"
+						prefHeight="58.0" />
+					<Separator layoutX="295.0" layoutY="37.0" orientation="VERTICAL"
+						prefHeight="58.0" />
+					<Separator layoutX="675.0" layoutY="37.0" orientation="VERTICAL"
+						prefHeight="58.0" />
+					<Button text="판매업체등록"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Sellcompany" layoutX="10.0" layoutY="9.0" prefHeight="25"
+						prefWidth="150" />
+					<Button text="상품검색"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Sell_sellSearch" layoutX="170.0" layoutY="9.0"
+						prefHeight="25" prefWidth="100" />
+					<Button text="차트"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Sell_barchart" layoutX="280.0" layoutY="9.0"
+						prefHeight="25" prefWidth="100" />
+					<Button text="저장폴더선택"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btnSaveFileDir" layoutX="390.0" layoutY="9.0" prefHeight="25"
+						prefWidth="150" />
+					<TextField fx:id="txtSaveFileDir" layoutX="550.0"
+						layoutY="9.0" prefWidth="200" promptText="폴더를 선택하세요" />
+					<Button text="엑셀 파일"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btnExcel" layoutX="755.0" layoutY="9.0" prefHeight="25"
+						prefWidth="100" />
+					<Button text="PDF"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btnPDF" layoutX="860.0" layoutY="9.0" prefHeight="25"
+						prefWidth="100" />
+					<Label text="이력번호 " layoutX="10.0" layoutY="40.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Sell_tracenumber" layoutX="90.0"
+						layoutY="40.0" />
+					<Label text="상호명 " layoutX="240" layoutY="40.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Sell_comname" layoutX="300.0"
+						layoutY="40.0" />
+					<Label text="상품명 " layoutX="450.0" layoutY="40.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Sell_productname" layoutX="530.0"
+						layoutY="40.0" />
+					<Label text="판매단가 " layoutX="10.0" layoutY="70.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Sell_price" layoutX="90.0" layoutY="70.0" />
+					<Label text="KG  " layoutX="250.0" layoutY="70.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Sell_kg" layoutX="300.0" layoutY="70.0" />
+					<Label text="판매날짜 " layoutX="450.0" layoutY="70.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Sell_date" layoutX="530.0" layoutY="70.0"
+						promptText="예 : YYYY-MM-DD" />
+					<Label text="판매총액 " layoutX="680.0" layoutY="70.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<TextField fx:id="txt_Sell_totalprice" layoutX="760.0"
+						layoutY="70.0" />
+					<TextField fx:id="txt_Sell_search" layoutX="610" layoutY="101.0"
+						promptText="예 : 상호명" />
+					<Label text="검색 " layoutX="570" layoutY="101.0">
+						<font>
+							<Font size="18" />
+						</font>
+					</Label>
+					<Button text="판매 "
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Sell_join" layoutX="10.0" layoutY="100.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="등록"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Sell_sell" layoutX="67.0" layoutY="100.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="초기화"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Sell_init" layoutX="124.0" layoutY="100.0" prefHeight="25"
+						prefWidth="70" />
+					<Button text="취소"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Sell_exit" layoutX="205.0" layoutY="100.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="삭제"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Sell_delete" layoutX="270.0" layoutY="100.0"
+						prefHeight="25" prefWidth="50" />
+					<Button text="계산"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Sell_sum" layoutX="900.0" layoutY="70.0" prefHeight="25"
+						prefWidth="50" />
+					<Button text="검색"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Sell_search" layoutX="753.0" layoutY="100.0"
+						prefHeight="25" prefWidth="50" />
+					<Button text="전체"
+						style="-fx-text-fill : white; -fx-background-color: linear-gradient(#61a2b1, #2A5058); -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );"
+						fx:id="btn_Sell_total" layoutX="810.0" layoutY="100.0" prefHeight="25"
+						prefWidth="50" />
+
+					<TableView fx:id="tableviewSell"
+						style="-fx-base: #1d1d1d; -fx-background-color: #1d1d1d; -fx-table-cell-border-color: transparent; -fx-table-header-border-color: transparent;"
+						layoutX="10.0" layoutY="130.0" prefHeight="650" prefWidth="980.0" />
+				</children>
+			</AnchorPane>
+		</Tab>
+
+	</tabs>
+
+</TabPane>
+

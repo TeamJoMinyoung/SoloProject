@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SellCompanyJoinContorller" prefWidth="600.0" >
+	<padding>
+		<Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+	</padding>
+	<center>
+		<GridPane hgap="10.0" vgap="10.0">
+			<children>
+				<Label text="상호명 : " prefWidth="70" />
+				<Label text="사업자번호 : " prefWidth="100" GridPane.rowIndex="1" />
+				<Label text="대표명 : " prefWidth="70" GridPane.rowIndex="2" />
+				<Label text="대표번호 : " prefWidth="70" GridPane.rowIndex="3" />
+				<Label text="업체주소 : " prefWidth="70" GridPane.rowIndex="4" />
+				<Label text="담당자 : " prefWidth="70" GridPane.rowIndex="5" />
+				<Label text="담당자전화번호 : " prefWidth="100" GridPane.rowIndex="6" />
+				<TextField fx:id="txt_Sc_name" prefWidth="100"
+					GridPane.columnIndex="1" />
+				<TextField fx:id="txt_Sc_businessnumber" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="1" />
+				<TextField fx:id="txt_Sc_ceo" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				<TextField fx:id="txt_Sc_cphone" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="3" />
+				<TextField fx:id="txt_Sc_address" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="4" />
+				<TextField fx:id="txt_Sc_manager" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="5" />
+				<TextField fx:id="txt_Sc_managerphone" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+
+			</children>
+
+		</GridPane>
+	</center>
+
+	<bottom>
+		<HBox alignment="BOTTOM_LEFT" spacing="20.0">
+			<BorderPane.margin>
+				<Insets top="20.0" bottom="10" />
+			</BorderPane.margin>
+			<children>
+				<Button fx:id="btn_Sc_join" text="등록" />
+				<Button fx:id="btn_Sc_init" text="초기화" />
+				<Button fx:id="btn_Sc_exit" text="취소" />
+				<Button fx:id="btn_Sc_edit" text="수정" />
+				<Button fx:id="btn_Sc_delete" text="삭제" />
+			</children>
+		</HBox>
+		
+	</bottom>
+
+	<right>
+		<VBox>
+		<padding>
+			<Insets top="0" bottom="10" left="30" right="10" />
+		 </padding>
+			<children>
+				<TableView fx:id="tableviewsc" prefHeight="300.0"
+					prefWidth="300.0" />
+			</children>
+		</VBox>
+
+	</right>
+</BorderPane>
+
